@@ -42,7 +42,7 @@ function loadToDos() {
     const parsedToDos = JSON.parse(loadedToDos);
     parsedToDos.forEach(function (toDo) {
       paintToDo(toDo.text);
-    }
+    })
   }
 }
 
