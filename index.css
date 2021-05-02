@@ -63,7 +63,7 @@ body {
   grid-template: "left info todo"
   "left info pictures";
   grid-template-columns: 70px 3fr 5fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .left {
@@ -186,9 +186,12 @@ input:focus {
 
 .pictures {
   grid-area: pictures;
+  overflow: hidden;
 }
 
 .bgImage {
+  object-fit: cover;
+  object-position: bottom;
   width: 100%;
   animation: fadeIn 0.5s linear;
 }
