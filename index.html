@@ -8,22 +8,68 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <div class="js-clock">
-    <h1>00:00</h1>
+  <div class="wrapper">
+    <div class="header">
+      <div class="points">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+      </div>
+      <div class="search">todo list</div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <div>
+          <i class="fas fa-clipboard-list"></i>
+          <i class="fas fa-atlas"></i>
+          <i class="fas fa-award"></i>
+        </div>
+        <div>
+          <i class="far fa-user"></i>
+          <i class="fas fa-cog"></i>
+        </div>
+      </div>
+      <div class="info">
+        <div>
+          <div class="form_container">
+            <form class="js-form form">
+              <input type="text" placeholder="What is your name?" />
+            </form>
+          </div>
+          <h4 class="js-greetings greetings"></h4>
+          <form class="js-toDoForm">
+            <input type="text" placeholder="Write a to do" />
+            <submit></submit>
+          </form>
+        </div>
+        <div class="bottom_container">
+          <div class="js-clock">
+            <h1>00:00</h1>
+          </div>
+          <span class="js-weather"></span>
+        </div>
+      </div>
+      <div class="todo">
+        <div>
+          <h2>To Do</h2>
+          <ul id="js-toDoPendingList"></ul>
+        </div>
+        <div>
+          <h2>Done</h2>
+          <ul id="js-toDoFinishedList"></ul>
+        </div>
+      </div>
+      <div class="pictures"></div>
+    </div>
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
   </div>
-  <form class="js-form form">
-    <input type="text" placeholder="What is your name?" />
-  </form>
-  <h4 class="js-greetings greetings"></h4>
-  <form class="js-toDoForm">
-    <input type="text" placeholder="Write a to do" />
-  </form>
-  <ul class="js-toDoList"></ul>
-  <span class="js-weather"></span>
-  <script src="clock.js"></script>
-  <script src="greeting.js"></script>
-  <script src="todo.js"></script>
-  <script src="bg.js"></script>
-  <script src="weather.js"></script>
+  <script
+    src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>

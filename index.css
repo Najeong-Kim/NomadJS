@@ -1,13 +1,133 @@
 body {
-  background-color: #34495e;
+  height: 95vh;
+  background-color: white;
+  color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 90vh;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 30px;
+  background-color: #031b2c;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.points {
+  display: flex;
+}
+
+.point {
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.point:first-child {
+  background-color: red;
+}
+
+.point:nth-child(2) {
+  background-color: yellow;
+}
+
+.point:last-child {
+  background-color: greenyellow;
+}
+
+.search {
+  width: 100%;
+  height: 15px;
+  border-radius: 2px;
+  text-align: center;
+  color: white;
+}
+
+.main {
+  display: grid;
+  height: 100%;
+  grid-template: "left info todo"
+  "left info pictures";
+  grid-template-columns: 70px 3fr 5fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+.left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 27px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #042841;
+}
+
+.left div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left i {
+  margin: 25px 0;
+  color: #9eabb3;
+  cursor: pointer;
+}
+
+.left i:hover {
+  color: white;
+}
+
+.info {
+  grid-area: info;
+  background-color: #153852;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.js-clock {
+  color: white;
+  font-size: 10px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input:focus {
+  outline: none;
 }
 
 .btn {
   cursor: pointer;
-}
-
-body {
-  color: #34495e;
 }
 
 .clicked {
@@ -17,6 +137,11 @@ body {
 .form,
 .greetings {
   display: none;
+}
+
+.js-greetings {
+  padding-left: 30px;
+  color: white;
 }
 
 .showing {
@@ -32,12 +157,51 @@ body {
   }
 }
 
+.bottom_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.js-weather {
+  color: white;
+}
+
+.todo {
+  grid-area: todo;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #415f78;
+  color: white;
+  padding-left: 20px;
+}
+
+.todo h2 {
+  font-size: 18px;
+  width: 250px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+}
+
+.pictures {
+  grid-area: pictures;
+}
+
 .bgImage {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  font-size: 20px;
 }
