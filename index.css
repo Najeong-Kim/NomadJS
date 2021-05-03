@@ -186,6 +186,7 @@ input:focus {
 
 .pictures {
   grid-area: pictures;
+  background-color: #415f78;
   overflow: hidden;
 }
 
